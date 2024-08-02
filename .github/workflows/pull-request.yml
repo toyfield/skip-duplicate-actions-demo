@@ -2,7 +2,6 @@ name: Pull Request
 
 on:
   pull_request:
-  push:
 
 jobs:
   skip:
@@ -14,7 +13,6 @@ jobs:
         uses: fkirc/skip-duplicate-actions@v5
         with:
           cancel_others: 'true'
-          skip_after_successful_duplicate: 'true'
           paths_ignore: '["**.md", ".github/**"]'
 
   build:
