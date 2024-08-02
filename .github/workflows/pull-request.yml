@@ -13,7 +13,7 @@ jobs:
         uses: fkirc/skip-duplicate-actions@v5
         with:
           cancel_others: 'true'
-          skip_after_successful_duplicate: 'false'
+          concurrent_skipping: same_content_newer
           paths_ignore: '["**.md", ".github/**"]'
 
   build:
